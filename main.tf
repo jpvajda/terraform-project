@@ -15,6 +15,13 @@ provider "newrelic" {
   region     = "US"
 }
 
+data "newrelic_entity" "example_app.name" {
+  name   = "Tims-glorious-application"
+  domain = "APM" # or BROWSER, INFRA, MOBILE, SYNTH, depending on your entity's domain
+  type   = "APPLICATION"
+}
 
-
+resource "newrelic_alert_policy" "golden_signal_policy" {
+  name = "Golden Signals - ${data.newrelic_entity.example_app.name}"
+}
 

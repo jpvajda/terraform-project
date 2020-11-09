@@ -7,12 +7,14 @@ terraform {
       version = "~> 2.12"
     }
   }
-  provider "newrelic" {
-    account_id = var.account_id
-    api_key    = var.api_key
-    region     = "US"
-  }
 }
+
+provider "newrelic" {
+  account_id = var.account_id
+  api_key    = var.api_key
+  region     = "US"
+}
+
 
 
 

@@ -1,3 +1,6 @@
+# tf environment variables file
+terraform.tfvars
+
 # Local .terraform directories
 **/.terraform/*
 

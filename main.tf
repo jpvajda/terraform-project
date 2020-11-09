@@ -15,7 +15,7 @@ provider "newrelic" {
   region     = "US"
 }
 
-data "newrelic_entity" "example_app.name" {
+data "newrelic_entity" "example_app" {
   name   = "Tims-glorious-application"
   domain = "APM" # or BROWSER, INFRA, MOBILE, SYNTH, depending on your entity's domain
   type   = "APPLICATION"

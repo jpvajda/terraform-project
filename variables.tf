@@ -1,9 +1,9 @@
 variable "api_key" {
-  type    = string
-  default = "12345"
+  type        = string
+  description = "a New Relic API key"
 }
 
 variable "account_id" {
-  type    = string
-  default = "12345"
+  type        = number
+  description = "a New Relic account ID"
 }

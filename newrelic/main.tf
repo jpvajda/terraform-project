@@ -108,3 +108,8 @@ resource "newrelic_alert_channel" "team_email" {
     include_json_attachment = "1"
   }
 }
+
+resource "newrelic_alert_policy_channel" "golden_signals" {
+  policy_id   = newrelic_alert_policy.golden_signal_policy.id
+  channel_ids = [newrelic_alert_channel.team_email.id]
+}

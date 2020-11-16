@@ -1,3 +1,5 @@
+# create a simple webserver using Terraform
+
 provider "aws" {
   region     = "us-east-2"
   access_key = var.access_key

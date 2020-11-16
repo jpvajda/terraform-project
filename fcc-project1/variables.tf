@@ -4,6 +4,6 @@ variable "access_key" {
 }
 
 variable "secret_key" {
-  type        = number
+  type        = string
   description = "an AWS secret key"
 }

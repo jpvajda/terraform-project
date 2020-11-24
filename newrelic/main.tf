@@ -1,3 +1,5 @@
+# a test terraform setup
+
 terraform {
   required_version = "~> 0.13.0"
 
@@ -35,7 +37,7 @@ resource "newrelic_alert_condition" "response_time_web" {
   runbook_url     = "https://www.example.com"
   condition_scope = "application"
   term {
-    duration      = 5
+    duration      = 10
     operator      = "above"
     priority      = "critical"
     threshold     = "5"
@@ -115,4 +117,5 @@ resource "newrelic_alert_policy_channel" "golden_signals" {
 }
 
 # example resource
-resource "null_resource" "example" {}
+resource "null_resource" "example" {
+}
